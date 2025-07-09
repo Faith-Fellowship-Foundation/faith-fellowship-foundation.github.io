@@ -14,176 +14,141 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <!-- Navigation Bar (Same as homepage) -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <span class="logo-icon">🤝</span>
-                <span class="logo-text">Faith & Fellowship</span>
-            </div>
-            
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About Us</a></li>
-                <li><a href="#programs">Programs</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
+<body class="font-sans text-dark-text">
 
-    <!-- About Hero Section -->
-    <section class="about-hero">
-        <div class="container">
-            <h1 class="page-title">About Faith & Fellowship</h1>
-            <p class="page-subtitle">
-                Uniting hearts, transforming lives, and building stronger communities through faith and service.
-            </p>
-        </div>
-    </section>
+    <!-- Container for the entire page -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <!-- Our Story Section -->
-    <section class="story-section">
-        <div class="container">
-            <div class="story-content">
-                <div class="story-text">
-                    <h2>Our Story</h2>
-                    <p>
-                        Founded in 2020, Faith and Fellowship Foundation emerged from a simple yet powerful vision: 
-                        to create spaces where people from all walks of life could come together, find support, 
-                        and make a positive impact in their communities.
-                    </p>
-                    <p>
-                        What started as a small group of volunteers organizing community meals has grown into a 
-                        comprehensive network of programs serving thousands of families across the region. Our 
-                        journey has been marked by countless stories of transformation, resilience, and hope.
-                    </p>
-                    <p>
-                        Today, we continue to be guided by our founding principles of faith, compassion, and 
-                        service, working tirelessly to address the needs of our communities while fostering 
-                        spiritual growth and connection.
-                    </p>
-                </div>
-                <div class="story-visual">
-                    <div class="image-placeholder">
-                        <span>📸</span>
-                        <p>Your story image here</p>
+        <!-- Header/Navigation Bar -->
+        <header id="navbar" class="sticky top-0 z-50 transition-all duration-300 py-4">
+            <div class="mx-auto flex items-center justify-between p-4 rounded-full transition-all duration-300" id="nav-inner">
+                <div class="flex items-center">
+                    <div class="h-8 w-8 rounded-full bg-primary-navy flex items-center justify-center text-white font-bold text-lg">
+                        <span>F</span>
                     </div>
+                    <span class="ml-3 text-xl font-semibold text-primary-navy">Faith & Fellowship</span>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <nav class="hidden md:flex space-x-8">
+                        <a href="index.html" class="text-gray-800 hover:text-cerulean-blue font-medium">Home</a>
+                        <a href="about.html" class="text-cerulean-blue font-bold underline cursor-default">About Us</a>
+                    </nav>
+                    <a href="https://TrophyClubNativity.org" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-cerulean-blue to-sky-blue hover:shadow-lg text-white font-medium py-2 px-6 rounded-full transition-all duration-300 shadow-md">
+                        Donate
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <!-- Mission, Vision, Values Section -->
-    <section class="mvv-section">
-        <div class="container">
-            <div class="mvv-grid">
-                <div class="mvv-card">
-                    <span class="mvv-icon">🎯</span>
-                    <h3>Our Mission</h3>
-                    <p>
-                        To serve our communities with love and compassion, providing spiritual guidance, 
-                        practical support, and opportunities for personal growth while fostering unity 
-                        across all backgrounds.
-                    </p>
-                </div>
-                <div class="mvv-card">
-                    <span class="mvv-icon">🔮</span>
-                    <h3>Our Vision</h3>
-                    <p>
-                        A world where every person feels valued, supported, and empowered to reach their 
-                        full potential, living in communities bound together by faith, love, and mutual respect.
-                    </p>
-                </div>
-                <div class="mvv-card">
-                    <span class="mvv-icon">💎</span>
-                    <h3>Our Values</h3>
-                    <ul class="values-list">
-                        <li>Compassion in Action</li>
-                        <li>Inclusive Community</li>
-                        <li>Faithful Service</li>
-                        <li>Personal Growth</li>
-                        <li>Integrity & Transparency</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Leadership Team Section -->
-    <section class="team-section">
-        <div class="container">
-            <h2>Our Leadership Team</h2>
-            <p class="section-intro">
-                Dedicated individuals committed to serving our community with passion and purpose.
-            </p>
-            
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="member-photo" style="background-color: #FFB6C1;">
-                        <img src="https://via.placeholder.com/200" alt="Team member">
-                    </div>
-                    <h4>Sarah Johnson</h4>
-                    <p class="member-role">Executive Director</p>
-                    <p class="member-bio">
-                        Leading with 15 years of nonprofit experience and a heart for community service.
-                    </p>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-photo" style="background-color: #87CEEB;">
-                        <img src="https://via.placeholder.com/200" alt="Team member">
-                    </div>
-                    <h4>Michael Chen</h4>
-                    <p class="member-role">Program Director</p>
-                    <p class="member-bio">
-                        Passionate about creating impactful programs that transform lives.
-                    </p>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-photo" style="background-color: #98D8C8;">
-                        <img src="https://via.placeholder.com/200" alt="Team member">
-                    </div>
-                    <h4>Maria Rodriguez</h4>
-                    <p class="member-role">Community Outreach Lead</p>
-                    <p class="member-bio">
-                        Building bridges between our foundation and the communities we serve.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Get Involved CTA -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Join Our Mission</h2>
-                <p>
-                    Whether through volunteering, donations, or simply spreading the word, 
-                    there are many ways to be part of our community of change-makers.
+        <!-- About Hero Section -->
+        <section class="mt-8">
+            <div class="bg-white/50 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-lg text-center">
+                <h1 class="text-5xl md:text-6xl font-bold leading-tight mt-4 text-dark-text">About Faith & Fellowship</h1>
+                <p class="mt-6 text-lg text-dark-text leading-relaxed backdrop-blur-md bg-white/40 p-4 rounded-xl shadow-sm max-w-2xl mx-auto">
+                    Uniting hearts, transforming lives, and building stronger communities through faith and service.
                 </p>
-                <div class="cta-buttons">
-                    <button class="btn-primary">Volunteer With Us</button>
-                    <button class="btn-secondary">Make a Donation</button>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section class="my-24">
+            <div class="bg-white/50 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-lg flex flex-col md:flex-row items-center gap-8">
+                <div class="flex-1 text-left">
+                    <h2 class="text-4xl font-bold mb-6">Our Story</h2>
+                    <p class="mb-4 text-lg text-dark-text">Founded in 2020, Faith and Fellowship Foundation emerged from a simple yet powerful vision: to create spaces where people from all walks of life could come together, find support, and make a positive impact in their communities.</p>
+                    <p class="mb-4 text-lg text-dark-text">What started as a small group of volunteers organizing community meals has grown into a comprehensive network of programs serving thousands of families across the region. Our journey has been marked by countless stories of transformation, resilience, and hope.</p>
+                    <p class="mb-0 text-lg text-dark-text">Today, we continue to be guided by our founding principles of faith, compassion, and service, working tirelessly to address the needs of our communities while fostering spiritual growth and connection.</p>
+                </div>
+                <div class="flex-1 flex items-center justify-center">
+                    <div class="w-48 h-48 bg-white/70 rounded-2xl flex flex-col items-center justify-center border-2 border-white/80 backdrop-blur-sm shadow-md">
+                        <span class="text-5xl">📸</span>
+                        <p class="mt-4 text-light-text">Your story image here</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer (Same as homepage) -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Faith and Fellowship Foundation. All rights reserved.</p>
-            <p>Building communities through faith, hope, and love.</p>
-        </div>
+        <!-- Mission, Vision, Values Section -->
+        <section class="my-24">
+            <div class="bg-white/50 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-lg">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white/80 rounded-2xl p-6 shadow flex flex-col items-center text-center">
+                        <span class="text-4xl mb-4">🎯</span>
+                        <h3 class="text-2xl font-bold mb-2">Our Mission</h3>
+                        <p class="text-base text-light-text">To serve our communities with love and compassion, providing spiritual guidance, practical support, and opportunities for personal growth while fostering unity across all backgrounds.</p>
+                    </div>
+                    <div class="bg-white/80 rounded-2xl p-6 shadow flex flex-col items-center text-center">
+                        <span class="text-4xl mb-4">🔮</span>
+                        <h3 class="text-2xl font-bold mb-2">Our Vision</h3>
+                        <p class="text-base text-light-text">A world where every person feels valued, supported, and empowered to reach their full potential, living in communities bound together by faith, love, and mutual respect.</p>
+                    </div>
+                    <div class="bg-white/80 rounded-2xl p-6 shadow flex flex-col items-center text-center">
+                        <span class="text-4xl mb-4">💎</span>
+                        <h3 class="text-2xl font-bold mb-2">Our Values</h3>
+                        <ul class="text-base text-light-text list-disc list-inside text-left">
+                            <li>Compassion in Action</li>
+                            <li>Inclusive Community</li>
+                            <li>Faithful Service</li>
+                            <li>Personal Growth</li>
+                            <li>Integrity & Transparency</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Team Section -->
+        <section class="my-24">
+            <div class="bg-white/50 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-lg">
+                <h2 class="text-4xl font-bold text-center mb-12">Our Leadership Team</h2>
+                <p class="text-center text-lg text-light-text mb-8">Dedicated individuals committed to serving our community with passion and purpose.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white/80 rounded-2xl p-6 shadow flex flex-col items-center text-center">
+                        <div class="w-32 h-32 rounded-full overflow-hidden mb-4 flex items-center justify-center" style="background-color: #FFB6C1;">
+                            <img src="https://via.placeholder.com/200" alt="Photo of Sarah Johnson" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-xl font-bold mb-1">Sarah Johnson</h4>
+                        <p class="text-cerulean-blue font-semibold mb-2">Executive Director</p>
+                        <p class="text-light-text">Leading with 15 years of nonprofit experience and a heart for community service.</p>
+                    </div>
+                    <div class="bg-white/80 rounded-2xl p-6 shadow flex flex-col items-center text-center">
+                        <div class="w-32 h-32 rounded-full overflow-hidden mb-4 flex items-center justify-center" style="background-color: #87CEEB;">
+                            <img src="https://via.placeholder.com/200" alt="Photo of Michael Chen" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-xl font-bold mb-1">Michael Chen</h4>
+                        <p class="text-cerulean-blue font-semibold mb-2">Program Director</p>
+                        <p class="text-light-text">Passionate about creating impactful programs that transform lives.</p>
+                    </div>
+                    <div class="bg-white/80 rounded-2xl p-6 shadow flex flex-col items-center text-center">
+                        <div class="w-32 h-32 rounded-full overflow-hidden mb-4 flex items-center justify-center" style="background-color: #98D8C8;">
+                            <img src="https://via.placeholder.com/200" alt="Photo of Maria Rodriguez" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-xl font-bold mb-1">Maria Rodriguez</h4>
+                        <p class="text-cerulean-blue font-semibold mb-2">Community Outreach Lead</p>
+                        <p class="text-light-text">Building bridges between our foundation and the communities we serve.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Get Involved CTA -->
+        <section class="mb-24">
+            <div class="bg-white/50 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-lg text-center">
+                <h2 class="text-4xl font-bold mb-6">Join Our Mission</h2>
+                <p class="text-lg text-light-text mb-8">Whether through volunteering, donations, or simply spreading the word, there are many ways to be part of our community of change-makers.</p>
+                <div class="flex flex-col md:flex-row justify-center gap-6">
+                    <a href="#" class="inline-block bg-gradient-to-r from-cerulean-blue to-sky-blue hover:shadow-lg text-white font-bold py-3 px-8 rounded-lg shadow-md transition-all duration-300 hover:scale-105">Volunteer With Us</a>
+                    <a href="#" class="inline-block bg-gradient-to-r from-primary-navy to-cerulean-blue hover:shadow-lg text-white font-bold py-3 px-8 rounded-lg shadow-md transition-all duration-300 hover:scale-105">Make a Donation</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark-text text-white text-center py-12">
+        <p>&copy; <span id="year"></span> Faith and Fellowship Foundation. All rights reserved.</p>
+        <p class="text-gray-400">Building communities through faith, hope, and love.</p>
     </footer>
 
     <!-- JavaScript -->
