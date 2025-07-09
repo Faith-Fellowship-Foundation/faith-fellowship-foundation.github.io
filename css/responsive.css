@@ -262,14 +262,6 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-.card-orange {
-    background-color: #FFCC99;
-}
-
-.card-blue {
-    background-color: #99CCFF;
-}
-
 .mission-card h3 {
     font-size: 1.5rem;
     margin-bottom: var(--spacing-sm);
@@ -296,74 +288,8 @@ body {
     gap: 10px;
 }
 
-/* ===== IMPACT SECTION ===== */
-.impact-section {
-    padding: var(--spacing-xl) 0;
-    text-align: center;
-}
-
-.impact-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing-lg);
-    color: var(--text-dark);
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-lg);
-}
-
-.stat-item {
-    background-color: var(--white);
-    padding: var(--spacing-md);
-    border-radius: var(--radius-md);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.stat-number {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--primary-orange);
-    margin-bottom: var(--spacing-xs);
-}
-
-.stat-label {
-    color: var(--text-light);
-    font-size: 1rem;
-}
-
-/* ===== FOOTER ===== */
-.footer {
-    background-color: var(--text-dark);
-    color: var(--white);
-    text-align: center;
-    padding: var(--spacing-lg) 0;
-    margin-top: var(--spacing-xl);
-}
-
-.footer p {
-    margin-bottom: var(--spacing-xs);
-}
-
 /* ===== ANIMATIONS ===== */
 /* Add smooth scroll behavior */
 html {
     scroll-behavior: smooth;
-}
-
-/* Fade in animation for elements */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 0.6s ease forwards;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
