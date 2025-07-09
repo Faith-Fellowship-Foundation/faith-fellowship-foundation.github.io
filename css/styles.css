@@ -1,369 +1,73 @@
-/* ===== CSS VARIABLES FOR EASY CUSTOMIZATION ===== */
-:root {
-    /* Colors inspired by warm, welcoming palette */
-    --primary-orange: #FF6B35;
-    --primary-blue: #4ECDC4;
-    --light-peach: #FFE5D4;
-    --light-blue: #E6F7FF;
-    --text-dark: #2C3E50;
-    --text-light: #6C757D;
-    --white: #FFFFFF;
-    --light-gray: #F8F9FA;
-    
-    /* Spacing */
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 2rem;
-    --spacing-lg: 3rem;
-    --spacing-xl: 4rem;
-    
-    /* Border radius for that modern look */
-    --radius-sm: 8px;
-    --radius-md: 16px;
-    --radius-lg: 24px;
-    --radius-full: 50%;
-}
-
-/* ===== RESET & BASE STYLES ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* A subtle gradient for the entire page background */
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    line-height: 1.6;
-    color: var(--text-dark);
-    background-color: var(--light-peach);
-    overflow-x: hidden;
+    background-image: linear-gradient(to bottom, #F0F8FF, #FFFFFF);
 }
 
-/* ===== NAVIGATION BAR ===== */
-.navbar {
-    background-color: var(--white);
-    padding: var(--spacing-sm) 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+/* Ensures the animated background has rounded corners to match its container */
+.vanta-canvas {
+    border-radius: 1.5rem; /* 24px */
 }
 
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-md);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: var(--primary-orange);
-}
-
-.logo-icon {
-    font-size: 1.5rem;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: var(--spacing-lg);
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: var(--text-dark);
-    font-weight: 500;
-    transition: color 0.3s ease;
-    position: relative;
-}
-
-.nav-menu a:hover,
-.nav-menu a.active {
-    color: var(--primary-orange);
-}
-
-.nav-menu a.active::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background-color: var(--primary-orange);
-    border-radius: 2px;
-}
-
-/* Mobile menu toggle (hidden by default) */
-.nav-toggle {
-    display: none;
-    flex-direction: column;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-}
-
-.nav-toggle span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-dark);
-    margin: 3px 0;
-    transition: 0.3s;
-    border-radius: 2px;
-}
-
-/* ===== HERO SECTION ===== */
-.hero {
-    padding: var(--spacing-xl) 0;
-    text-align: center;
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.hero-content {
-    margin-bottom: var(--spacing-lg);
-    padding: 0 var(--spacing-md);
-}
-
-.hero-icon {
-    font-size: 3rem;
-    display: block;
-    margin-bottom: var(--spacing-sm);
-}
-
-.hero-title {
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: var(--spacing-sm);
-}
-
-.hero-subtitle {
-    font-size: 1.2rem;
-    color: var(--text-light);
-    max-width: 600px;
-    margin: 0 auto var(--spacing-md);
-}
-
-/* Primary Button */
-.btn-primary {
-    background-color: var(--primary-orange);
-    color: var(--white);
-    border: none;
-    padding: 12px 32px;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: var(--radius-lg);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.btn-primary:hover {
-    background-color: #E55A2B;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
-}
-
-/* ===== COMMUNITY PHOTOS GRID ===== */
-.community-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: var(--spacing-md);
-    max-width: 800px;
-    margin: var(--spacing-lg) auto;
-    padding: 0 var(--spacing-md);
-}
-
-.photo-item {
-    width: 120px;
-    height: 120px;
-    border-radius: var(--radius-full);
-    overflow: hidden;
-    margin: 0 auto;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.photo-item:hover {
-    transform: scale(1.05);
-}
-
-.photo-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Decorative elements */
-.decoration {
-    position: absolute;
-    font-size: 2rem;
-    opacity: 0.8;
-    animation: float 3s ease-in-out infinite;
-}
-
-.rocket {
-    top: 20%;
-    right: 10%;
-    animation-delay: 0s;
-}
-
-.hands {
-    bottom: 20%;
-    left: 10%;
-    animation-delay: 1.5s;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-}
-
-/* ===== MISSION CARDS SECTION ===== */
-.mission-section {
-    background-color: var(--white);
-    padding: var(--spacing-xl) 0;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-md);
-}
-
-.mission-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
-}
-
+/* Base styles for the new mission cards */
 .mission-card {
-    padding: var(--spacing-lg);
-    border-radius: var(--radius-lg);
     position: relative;
+    border-radius: 1.5rem; /* 24px */
     overflow: hidden;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 350px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .mission-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px 0 rgba(31, 38, 135, 0.15);
 }
 
-.card-orange {
-    background-color: #FFCC99;
+/* Content inside the mission cards needs a higher z-index to appear above the animation */
+.mission-card .card-content {
+    position: relative;
+    z-index: 2;
 }
 
-.card-blue {
-    background-color: #99CCFF;
-}
-
-.mission-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: var(--spacing-sm);
-    color: var(--text-dark);
-}
-
-.mission-card p {
-    color: var(--text-light);
-    margin-bottom: var(--spacing-sm);
-    line-height: 1.8;
-}
-
-.card-link {
-    color: var(--text-dark);
-    text-decoration: none;
+.mission-card .card-link {
+    position: relative;
+    z-index: 2;
+    color: #2A6F97; /* cerulean-blue */
     font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    transition: gap 0.3s ease;
+    transition: color 0.3s;
 }
 
-.card-link:hover {
-    gap: 10px;
+.mission-card .card-link:hover {
+    color: #0A2463; /* primary-navy */
 }
 
-/* ===== IMPACT SECTION ===== */
-.impact-section {
-    padding: var(--spacing-xl) 0;
-    text-align: center;
+/* Styles for the new impact stats */
+.impact-stat {
+    transition: transform 0.3s ease;
 }
 
-.impact-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing-lg);
-    color: var(--text-dark);
+.impact-stat:hover {
+    transform: scale(1.05);
 }
 
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-lg);
+/* Styles for the new testimonial cards */
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border-left: 4px solid;
+    border-image: linear-gradient(to bottom, #61A5C2, #2A6F97) 1;
+    transition: background-color 0.3s;
 }
 
-.stat-item {
-    background-color: var(--white);
-    padding: var(--spacing-md);
-    border-radius: var(--radius-md);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.stat-number {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--primary-orange);
-    margin-bottom: var(--spacing-xs);
-}
-
-.stat-label {
-    color: var(--text-light);
-    font-size: 1rem;
-}
-
-/* ===== FOOTER ===== */
-.footer {
-    background-color: var(--text-dark);
-    color: var(--white);
-    text-align: center;
-    padding: var(--spacing-lg) 0;
-    margin-top: var(--spacing-xl);
-}
-
-.footer p {
-    margin-bottom: var(--spacing-xs);
-}
-
-/* ===== ANIMATIONS ===== */
-/* Add smooth scroll behavior */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Fade in animation for elements */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 0.6s ease forwards;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.testimonial-card:hover {
+    background: rgba(255, 255, 255, 0.9);
 }
